@@ -1,0 +1,105 @@
+1- Consulta: crea 3 dojos nuevos
+
+SELECT * FROM dojo;
+INSERT INTO dojo (id, nombre, creado_en, actualizado_en)
+VALUES (1, 'Blanca', NOW(), NOW()); 
+
+INSERT INTO dojo (id, nombre, creado_en, actualizado_en)
+VALUES (2, 'Alvaro', '2010-12-02', '2022-08-22');
+
+INSERT INTO dojo (id, nombre, creado_en, actualizado_en)
+VALUES (3, 'Isabel', '2019-06-29', '2021-12-03');
+
+
+
+2- Consulta: elimina los 3 dojos que acabas de crear
+
+DELETE FROM dojo
+WHERE id = 1;
+
+DELETE FROM dojo
+WHERE id = 2;
+
+DELETE FROM dojo
+WHERE id = 3;
+
+
+
+3- Consulta: crea 3 dojos nuevos
+
+SELECT * FROM dojo;
+INSERT INTO dojo (id, nombre, creado_en, actualizado_en)
+VALUES (1, 'Daniela', '2008-11-21', '2010-05-20'); 
+
+INSERT INTO dojo (id, nombre, creado_en, actualizado_en)
+VALUES (2, 'Denise', '2003-02-19', '2012-02-10');
+
+INSERT INTO dojo (id, nombre, creado_en, actualizado_en)
+VALUES (3, 'Alejandra', '2006-10-09', '2007-07-05');
+
+
+
+4- Consulta: crea 3 ninjas que pertenezcan al primer dojo
+
+SELECT * FROM ninja;
+INSERT INTO ninja (id, nombre, apellido, edad, dojo_id, creado_en, actualizado_en)
+VALUES (1, 'Lulú', 'Figueroa', 5, 1, NOW(), NOW()); 
+
+INSERT INTO ninja (id, nombre, apellido, edad, dojo_id, creado_en, actualizado_en)
+VALUES (2, 'Sasha', 'Figueroa', 10, 1,'2002-12-01', '2008-03-09');
+
+INSERT INTO ninja (id, nombre, apellido, edad, dojo_id, creado_en, actualizado_en)
+VALUES (3, 'Tammy', 'Figueroa', 1, 1,'2010-03-07', '2017-11-28');
+
+
+
+5- Consulta: crea 3 ninjas que pertenezcan al segundo dojo
+SELECT * FROM ninja;
+INSERT INTO ninja (id, nombre, apellido, edad, dojo_id, creado_en, actualizado_en)
+VALUES (4, 'Tommy', 'Garcia', 4, 2, NOW(), NOW()); 
+
+INSERT INTO ninja (id, nombre, apellido, edad, dojo_id, creado_en, actualizado_en)
+VALUES (5, 'Laika', 'Canales', 7, 2,'2015-05-09', '2016-04-19');
+
+INSERT INTO ninja (id, nombre, apellido, edad, dojo_id, creado_en, actualizado_en)
+VALUES (6, 'Jack', 'Gonzalez', 6, 2,'2020-11-27', '2022-04-26');
+
+
+
+6- Consulta: crea 3 ninjas que pertenezcan al tercer dojo
+
+SELECT * FROM ninja;
+INSERT INTO ninja (id, nombre, apellido, edad, dojo_id, creado_en, actualizado_en)
+VALUES (7, 'Ramiro', 'Flores', 12, 3, NOW(), NOW()); 
+
+INSERT INTO ninja (id, nombre, apellido, edad, dojo_id, creado_en, actualizado_en)
+VALUES (8, 'Carmen', 'Fritz', 29, 3, '2012-03-01', NOW()); 
+
+INSERT INTO ninja (id, nombre, apellido, edad, dojo_id, creado_en, actualizado_en)
+VALUES (9, 'Andrea', 'Ulloa', 38, 3, '2002-12-31', NOW());
+
+
+
+7- Consulta: recupera todos los ninjas del primer dojo
+
+SELECT * FROM ninja
+WHERE dojo_id = '1'
+LIMIT 3;
+
+
+
+8- Consulta: recupera todos los ninjas del último dojo
+
+SELECT * FROM ninja
+WHERE dojo_id = '3'
+LIMIT 3;
+
+
+9- Consulta: recupera el dojo del último ninja
+
+SELECT * FROM ninja
+WHERE id = '9'
+LIMIT 3;
+
+
+
